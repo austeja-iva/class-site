@@ -65,3 +65,38 @@ const THOUGHTS = [
     url: "thoughts/first-post.html",
   },
 ];
+
+// Courses show up as cards in the Courses section.
+// Edit the descriptions to say what YOU did or learned in each class.
+const COURSES = [
+  {
+    code: "CNT 3004",
+    title: "Computer Network Concepts",
+    description: "How networks work, from the physical layer up through TCP/IP, routing, and common protocols.",
+    tags: ["Networking", "TCP/IP"],
+  },
+  {
+    code: "CIS 3362",
+    title: "Intro to Cryptography",
+    description: "Classical and modern ciphers and the number theory behind them: modular arithmetic, primality testing, RSA, and discrete logs.",
+    tags: ["Cryptography", "Number Theory"],
+  },
+  {
+    code: "CDA 3103",
+    title: "Computer Logic and Organization",
+    description: "How computers work at the hardware level: binary arithmetic, IEEE-754, logic design, and MIPS assembly.",
+    tags: ["Architecture", "MIPS", "Logic Design"],
+  },
+  {
+    code: "CGS 3763",
+    title: "Operating Systems",
+    description: "Processes, threads, scheduling, memory management, and file systems.",
+    tags: ["Operating Systems"],
+  },
+  {
+    code: "CIS 4940",
+    title: "AWS Academy Cloud Operations and Cloud Security Foundations",
+    description: "Running and securing workloads on AWS: core services, monitoring, identity and access management, and cloud security practices.",
+    tags: ["AWS", "Cloud", "Security"],
+  },
+];

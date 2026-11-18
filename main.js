@@ -30,6 +30,20 @@ function renderProjects(filter) {
     .join("");
 }
 
+function renderCourses() {
+  const grid = document.getElementById("course-grid");
+  grid.innerHTML = COURSES.map((c) => {
+    const tags = (c.tags || []).map((t) => `<span class="tag">${t}</span>`).join("");
+    return `
+      <article class="card">
+        <span class="badge">${c.code}</span>
+        <h3>${c.title}</h3>
+        <p>${c.description}</p>
+        <div class="tags">${tags}</div>
+      </article>`;
+  }).join("");
+}
+
 function renderThoughts() {
   const list = document.getElementById("thought-list");
   const sorted = [...THOUGHTS].sort((a, b) => b.date.localeCompare(a.date));
@@ -57,5 +71,6 @@ document.querySelectorAll(".filter").forEach((btn) => {
 });
 
 renderProjects("all");
+renderCourses();
 renderThoughts();
 document.getElementById("year").textContent = new Date().getFullYear();
