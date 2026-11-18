@@ -61,8 +61,7 @@ const THOUGHTS = [
   {
     title: "Why I got hooked on cryptography",
     date: "2026-11-17",
-    summary: "A starter post. Replace this with your first real write-up.",
-    url: "thoughts/first-post.html",
+    summary: "From a crytpogrpahy book in 8th grade and my first advanced class to my own research",
   },
 ];
 
