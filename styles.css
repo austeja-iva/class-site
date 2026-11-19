@@ -45,12 +45,21 @@ a:hover { text-decoration: underline; }
 }
 .logo { font-family: var(--mono); font-weight: 700; font-size: 1.2rem; color: var(--text); }
 .accent { color: var(--accent); }
-nav a { margin-left: 1.25rem; color: var(--muted); font-size: 0.95rem; }
-nav a:hover { color: var(--text); text-decoration: none; }
+/* Header tabs */
+.tabs { display: flex; gap: 0.25rem; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a {
+  white-space: nowrap; color: var(--muted); font-size: 0.92rem;
+  padding: 0.4rem 0.75rem; border-radius: 8px;
+}
+.tabs a:hover { color: var(--text); background: var(--surface); text-decoration: none; }
+.tabs a.active { color: var(--accent); background: var(--surface); }
 
 /* ---------- Sections ---------- */
 main { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
-.section { padding: 4.5rem 0 1rem; scroll-margin-top: 4rem; }
+.section { padding: 3.5rem 0 1rem; min-height: 60vh; }
+.section[hidden] { display: none; }
+.about { padding-top: 5rem; }
 h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); margin: 0 0 1rem; line-height: 1.1; }
 h2 { font-size: 1.6rem; margin: 0 0 1rem; }
 h3 { margin: 0.25rem 0 0.5rem; font-size: 1.1rem; }
@@ -68,7 +77,7 @@ h3 { margin: 0.25rem 0 0.5rem; font-size: 1.1rem; }
 /* ---------- Projects ---------- */
 .section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
 .section-head h2 { margin: 0; }
-.filters { display: flex; gap: 0.4rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.5rem; }
 .filter {
   font: inherit; font-size: 0.85rem; cursor: pointer;
   background: none; color: var(--muted);
@@ -110,8 +119,15 @@ h3 { margin: 0.25rem 0 0.5rem; font-size: 1.1rem; }
 /* ---------- Footer ---------- */
 .site-footer { max-width: var(--max); margin: 4rem auto 0; padding: 2rem 1.5rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
 
+.empty { grid-column: 1 / -1; padding: 2rem 0; }
+
+@media (max-width: 720px) {
+  .site-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; padding-bottom: 0.6rem; }
+  .tabs { width: 100%; margin-left: -0.6rem; flex-wrap: wrap; overflow: visible; }
+  .tabs a { padding: 0.35rem 0.6rem; }
+}
+
 @media (max-width: 560px) {
-  nav a { margin-left: 0.9rem; }
   .thought-list a { grid-template-columns: 1fr; }
   .thought-list time { grid-row: auto; }
 }

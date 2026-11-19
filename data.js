@@ -1,13 +1,26 @@
 // ============================================================
 //  THIS IS THE FILE YOU'LL EDIT MOST.
-//  Add a project or a thought by copying one { ... } block,
-//  pasting it below, and changing the text. Keep the commas!
+//  Add an item by copying one { ... } block, pasting it below,
+//  and changing the text. Keep the commas!
 // ============================================================
 
+// ---------- PROJECTS ----------
+// The sub-tabs on the Projects page. "key" is what you put in a
+// project's categories list; "label" is what shows on the button.
+const PROJECT_CATEGORIES = [
+  { key: "cybersecurity", label: "Cybersecurity" },
+  { key: "software", label: "Software" },
+  { key: "hardware", label: "Hardware" },
+  { key: "systems", label: "Systems" },
+  { key: "networking-cloud", label: "Networking + Cloud Computing" },
+  { key: "computer-vision", label: "Computer Vision" },
+];
+
+// A project can be in more than one category.
 const PROJECTS = [
   {
     title: "Key Management System",
-    type: "project", // "project" or "competition"
+    categories: ["cybersecurity", "software"],
     description:
       "A cryptographic key management system for generating, storing, rotating, and revoking keys.",
     tags: ["Cryptography", "Security"],
@@ -15,7 +28,7 @@ const PROJECTS = [
   },
   {
     title: "ML Intrusion Detection System",
-    type: "project",
+    categories: ["cybersecurity", "software", "networking-cloud"],
     description:
       "A machine-learning intrusion detection system that flags suspicious network traffic.",
     tags: ["Machine Learning", "Security", "Python"],
@@ -23,7 +36,7 @@ const PROJECTS = [
   },
   {
     title: "Coffee Shop Finder",
-    type: "project",
+    categories: ["software"],
     description:
       "A web app for finding nearby coffee shops, built with Next.js, the Google Maps API, and PostgreSQL.",
     tags: ["Next.js", "PostgreSQL", "Google Maps API"],
@@ -31,7 +44,7 @@ const PROJECTS = [
   },
   {
     title: "Project FLORA",
-    type: "project",
+    categories: ["hardware", "systems"],
     description:
       "A team-built, monitored, climate-controlled plant growth enclosure. I worked on the infrastructure team.",
     tags: ["Embedded", "IoT", "Team"],
@@ -39,15 +52,42 @@ const PROJECTS = [
   },
   {
     title: "Plant Tamagotchi",
-    type: "project",
+    categories: ["hardware"],
     description:
       "A virtual pet on an ESP32 and a small display that reacts to a real plant's soil moisture. Soldered build in a 3D-printed case.",
     tags: ["ESP32", "Hardware", "3D Printing"],
     links: {},
   },
   {
+    title: "Computer Vision Wellness Pet",
+    categories: ["computer-vision", "hardware"],
+    description:
+      "Built in 36 hours with a team of 4 for the embedded category: a digital pet that uses computer vision to encourage healthy habits.",
+    tags: ["Computer Vision", "Embedded", "Hackathon"],
+    links: { devpost: "#" },
+  },
+];
+
+// ---------- EXTRACURRICULARS ----------
+const EXTRA_CATEGORIES = [
+  { key: "clubs", label: "Clubs" },
+  { key: "hackathons", label: "Hackathons" },
+  { key: "competitions", label: "Competitions / CTFs" },
+];
+
+// Each item has ONE category from the list above.
+// Example club entry to copy:
+//   {
+//     title: "Club Name",
+//     category: "clubs",
+//     description: "What the club is and what you do there.",
+//     tags: ["Role"],
+//     links: {},
+//   },
+const EXTRACURRICULARS = [
+  {
     title: "Computer Vision Wellness Pet (Hackathon)",
-    type: "competition",
+    category: "hackathons",
     description:
       "Built in 36 hours with a team of 4 for the embedded category: a digital pet that uses computer vision to encourage healthy habits.",
     tags: ["Computer Vision", "Embedded", "Hackathon"],
@@ -56,16 +96,7 @@ const PROJECTS = [
   },
 ];
 
-// Each thought links to its own page inside the /thoughts folder.
-const THOUGHTS = [
-  {
-    title: "Why I got hooked on cryptography",
-    date: "2026-11-17",
-    summary: "From a crytpogrpahy book in 8th grade and my first advanced class to my own research",
-  },
-];
-
-// Courses show up as cards in the Courses section.
+// ---------- COURSES ----------
 // Edit the descriptions to say what YOU did or learned in each class.
 const COURSES = [
   {
@@ -97,5 +128,16 @@ const COURSES = [
     title: "AWS Academy Cloud Operations and Cloud Security Foundations",
     description: "Running and securing workloads on AWS: core services, monitoring, identity and access management, and cloud security practices.",
     tags: ["AWS", "Cloud", "Security"],
+  },
+];
+
+// ---------- MY THOUGHTS (BLOG) ----------
+// Each thought links to its own page inside the /thoughts folder.
+const THOUGHTS = [
+  {
+    title: "Why I got hooked on cryptography",
+    date: "2026-11-17",
+    summary: "A starter post. Replace this with your first real write-up.",
+    url: "thoughts/first-post.html",
   },
 ];

@@ -9,18 +9,20 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="#top">ai<span class="accent">.</span></a>
-    <nav>
-      <a href="#about">About</a>
+    <a class="logo" href="#about">ai<span class="accent">.</span></a>
+    <!-- The 5 header tabs. Each href must match a section id below. -->
+    <nav class="tabs">
+      <a href="#about">About Me</a>
       <a href="#projects">Projects</a>
+      <a href="#extracurriculars">Extracurriculars</a>
       <a href="#courses">Courses</a>
-      <a href="#thoughts">Thoughts</a>
+      <a href="#thoughts">My Thoughts</a>
     </nav>
   </header>
 
-  <main id="top">
-    <!-- ============ ABOUT ============ -->
-    <section id="about" class="section about">
+  <main>
+    <!-- ============ ABOUT ME ============ -->
+    <section id="about" class="section tab-panel about">
       <p class="eyebrow">Hi, I'm</p>
       <h1>Austeja Ivanauskaite</h1>
       <p class="lead">
@@ -39,33 +41,33 @@
       </div>
     </section>
 
-    <!-- ============ PROJECTS + COMPETITIONS ============ -->
-    <section id="projects" class="section">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <div class="filters" role="group" aria-label="Filter projects">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="project">Projects</button>
-          <button class="filter" data-filter="competition">Competitions</button>
-        </div>
-      </div>
-      <!-- Cards are filled in automatically from data.js -->
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section tab-panel">
+      <h2>Projects</h2>
+      <!-- Sub-tab buttons are built automatically from PROJECT_CATEGORIES in data.js -->
+      <div class="filters" id="project-filters" role="group" aria-label="Filter projects"></div>
       <div id="project-grid" class="grid"></div>
     </section>
 
+    <!-- ============ EXTRACURRICULARS ============ -->
+    <section id="extracurriculars" class="section tab-panel">
+      <h2>Extracurriculars</h2>
+      <!-- Sub-tab buttons are built automatically from EXTRA_CATEGORIES in data.js -->
+      <div class="filters" id="extra-filters" role="group" aria-label="Filter extracurriculars"></div>
+      <div id="extra-grid" class="grid"></div>
+    </section>
+
     <!-- ============ COURSES ============ -->
-    <section id="courses" class="section">
+    <section id="courses" class="section tab-panel">
       <h2>Courses</h2>
       <p class="muted">Relevant coursework at UCF.</p>
-      <!-- Cards are filled in automatically from data.js -->
       <div id="course-grid" class="grid"></div>
     </section>
 
-    <!-- ============ THOUGHTS / EXPLORATIONS ============ -->
-    <section id="thoughts" class="section">
+    <!-- ============ MY THOUGHTS (BLOG) ============ -->
+    <section id="thoughts" class="section tab-panel">
       <h2>Thoughts &amp; Explorations</h2>
       <p class="muted">Notes on things I'm learning, breaking, and figuring out.</p>
-      <!-- List is filled in automatically from data.js -->
       <ul id="thought-list" class="thought-list"></ul>
     </section>
   </main>
