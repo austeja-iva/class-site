@@ -56,7 +56,7 @@ const PROJECTS = [
     description:
       "A virtual pet on an ESP32 and a small display that reacts to a real plant's soil moisture. Soldered build in a 3D-printed case.",
     tags: ["ESP32", "Hardware", "3D Printing"],
-    links: {},
+    links: { devpost: "https://devpost.com/software/plantchi?ref_content=user-portfolio&ref_feature=in_progress"},
   },
   {
     title: "Computer Vision Wellness Pet",
