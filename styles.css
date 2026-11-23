@@ -153,3 +153,23 @@ h3 { margin: 0.25rem 0 0.5rem; font-size: 1.1rem; }
   .thought-list a { grid-template-columns: 1fr; }
   .thought-list time { grid-row: auto; }
 }
+
+/* ---------- About Me: text + photo side by side ---------- */
+.about-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.about-text { flex: 1; }
+.profile-photo {
+  width: 280px;           /* make bigger/smaller here */
+  height: auto;           /* keeps the photo's proportions */
+  border-radius: 12px;    /* soft corners; 0 for sharp, 50% for a circle */
+  flex-shrink: 0;
+}
+
+/* On phones, stack the photo above the text */
+@media (max-width: 720px) {
+  .about-row { flex-direction: column-reverse; align-items: center; }
+  .profile-photo { width: 220px; }
+}
