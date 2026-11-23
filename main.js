@@ -13,15 +13,19 @@ function cardHTML(item, badgeText) {
   const badge = badgeText ? `<span class="badge">${badgeText}</span>` : "";
   const award = item.award ? `<p class="award">${item.award}</p>` : "";
 
+  // Cards with a url (e.g. a course page) become clickable.
+  const open = item.url ? `<a class="card card-clickable" href="${item.url}">` : `<article class="card">`;
+  const close = item.url ? `<span class="card-more">View coursework →</span></a>` : `</article>`;
+
   return `
-    <article class="card">
+    ${open}
       ${badge}
       <h3>${item.title}</h3>
       ${award}
       <p>${item.description}</p>
       <div class="tags">${tags}</div>
       <div class="card-links">${links}</div>
-    </article>`;
+    ${close}`;
 }
 
 function renderGrid(gridId, items, makeBadge) {

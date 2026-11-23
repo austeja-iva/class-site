@@ -8,16 +8,17 @@
 // The sub-tabs on the Projects page. "key" is what you put in a
 // project's categories list; "label" is what shows on the button.
 const PROJECT_CATEGORIES = [
-  { key: "cybersecurity", label: "Cybersecurity" },
-  { key: "software", label: "Software" },
+  // { key: "cybersecurity", label: "Cybersecurity" },
+  // { key: "software", label: "Software" },
   { key: "hardware", label: "Hardware" },
   { key: "systems", label: "Systems" },
-  { key: "networking-cloud", label: "Networking + Cloud Computing" },
-  { key: "computer-vision", label: "Computer Vision" },
+  // { key: "networking-cloud", label: "Networking + Cloud Computing" },
+  // { key: "computer-vision", label: "Computer Vision" },
 ];
 
 // A project can be in more than one category.
 const PROJECTS = [
+  /*
   {
     title: "Key Management System",
     categories: ["cybersecurity", "software"],
@@ -26,6 +27,8 @@ const PROJECTS = [
     tags: ["Cryptography", "Security"],
     links: { github: "https://github.com/your-username/kms" },
   },
+  */
+  /*
   {
     title: "ML Intrusion Detection System",
     categories: ["cybersecurity", "software", "networking-cloud"],
@@ -34,6 +37,8 @@ const PROJECTS = [
     tags: ["Machine Learning", "Security", "Python"],
     links: { github: "https://github.com/your-username/ml-ids" },
   },
+  */
+  /*
   {
     title: "Coffee Shop Finder",
     categories: ["software"],
@@ -42,6 +47,7 @@ const PROJECTS = [
     tags: ["Next.js", "PostgreSQL", "Google Maps API"],
     links: { github: "#", demo: "#" },
   },
+  */
   {
     title: "Project FLORA",
     categories: ["hardware", "systems"],
@@ -58,6 +64,7 @@ const PROJECTS = [
     tags: ["ESP32", "Hardware", "3D Printing"],
     links: { devpost: "https://devpost.com/software/plantchi?ref_content=user-portfolio&ref_feature=in_progress"},
   },
+  /*
   {
     title: "Computer Vision Wellness Pet",
     categories: ["computer-vision", "hardware"],
@@ -66,6 +73,7 @@ const PROJECTS = [
     tags: ["Computer Vision", "Embedded", "Hackathon"],
     links: { devpost: "#" },
   },
+  */
 ];
 
 // ---------- EXTRACURRICULARS ----------
@@ -98,37 +106,47 @@ const EXTRACURRICULARS = [
 
 // ---------- COURSES ----------
 // Edit the descriptions to say what YOU did or learned in each class.
+// Add  url: "courses/some-page.html"  to make a course card clickable.
 const COURSES = [
   {
     code: "CNT 3004",
     title: "Computer Network Concepts",
     description: "How networks work, from the physical layer up through TCP/IP, routing, and common protocols.",
     tags: ["Networking", "TCP/IP"],
+    url: "courses/cnt3004.html", // clicking the card opens this page
   },
+  /*
   {
     code: "CIS 3362",
     title: "Intro to Cryptography",
     description: "Classical and modern ciphers and the number theory behind them: modular arithmetic, primality testing, RSA, and discrete logs.",
     tags: ["Cryptography", "Number Theory"],
   },
+  */
+  /*
   {
     code: "CDA 3103",
     title: "Computer Logic and Organization",
     description: "How computers work at the hardware level: binary arithmetic, IEEE-754, logic design, and MIPS assembly.",
     tags: ["Architecture", "MIPS", "Logic Design"],
   },
+  */
+  /*
   {
     code: "CGS 3763",
     title: "Operating Systems",
     description: "Processes, threads, scheduling, memory management, and file systems.",
     tags: ["Operating Systems"],
   },
+  */
+  /*
   {
     code: "CIS 4940",
     title: "AWS Academy Cloud Operations and Cloud Security Foundations",
     description: "Running and securing workloads on AWS: core services, monitoring, identity and access management, and cloud security practices.",
     tags: ["AWS", "Cloud", "Security"],
   },
+  */
 ];
 
 // ---------- MY THOUGHTS (BLOG) ----------
